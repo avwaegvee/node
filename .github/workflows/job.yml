@@ -51,6 +51,7 @@ jobs:
               make install
               cd ${{github.workspace}}
               tar -cjvf node.tar.bz2 -C product .
+              sleep infinity
         - uses: softprops/action-gh-release@master
           with:
               token: ${{secrets.GITHUB_TOKEN}}
